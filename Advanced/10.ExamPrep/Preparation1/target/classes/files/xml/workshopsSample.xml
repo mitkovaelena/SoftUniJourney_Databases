@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<workshops>
+    <workshop name="Wildlife Birds" start-date="2016-12-04T00:00:00" end-date="2016-12-06T00:00:00" location="Rhodopes" pricePerParticipant="120.00">
+        <trainer>Jared Polin</trainer>
+        <participants>
+            <participant first-name="Yan" last-name="Greenidge" />
+            <participant first-name="Odis" last-name="Borne" />
+            <participant first-name="Delta" last-name="Tiano" />
+        </participants>
+    </workshop>
+    <workshop start-date="2016-12-09T10:00:00" end-date="2016-12-09T18:00:00" location="Plovdiv" pricePerParticipant="89.00">
+        <trainer>Jared Polin</trainer>
+        <participants>
+            <participant first-name="Turla" last-name="Cowger" />
+            <participant first-name="Kraig" last-name="Velarde" />
+        </participants>
+    </workshop>
+    <workshop name="Polar Lights" start-date="2016-12-05T00:00:00" end-date="2016-12-07T00:00:00" pricePerParticipant="930.00">
+        <trainer>Alberto Korda</trainer>
+        <participants>
+            <participant first-name="Bong" last-name="Mungin" />
+        </participants>
+    </workshop>
+    <workshop name="Babies" start-date="2016-12-06T10:30:00" end-date="2016-12-06T14:30:00" location="Sofia" pricePerParticipant="40.00">
+        <participants>
+            <participant first-name="Delorse" last-name="Bunge" />
+        </participants>
+    </workshop>
+    <workshop name="Street Photography" location="Sofia" pricePerParticipant="70.00">
+        <trainer>Samuel Fosso</trainer>
+        <participants>
+            <participant first-name="Amparo" last-name="Goers" />
+            <participant first-name="Leon" last-name="Recio" />
+            <participant first-name="Alica" last-name="Lacher" />
+            <participant first-name="Bunny" last-name="Nolan" />
+            <participant first-name="Lyle" last-name="Longworth" />
+        </participants>
+    </workshop>
+    <workshop name="Street Photography Part 2" location="Sofia">
+        <trainer>Samuel Fosso</trainer>
+        <participants>
+            <participant first-name="Hungo" last-name="Poter" />
+            <participant first-name="Camaru" last-name="Kolya" />
+        </participants>
+    </workshop>
+    <workshop name="Street Photography Part 3" location="Sofia" pricePerParticipant="90.00">
+        <trainer>Samuel Fosso</trainer>
+    </workshop>
+</workshops>
