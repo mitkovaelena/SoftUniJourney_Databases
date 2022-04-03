@@ -1,0 +1,53 @@
+[
+  {
+    "firstName": "John",
+    "lastName": "Snow",
+    "address": {
+      "country": "Bulgaria",
+      "city": "Barcelona",
+      "street": "Barcelona"
+    },
+    "phoneNumbers": [
+      {
+        "number": "5421520000"
+      },
+      {
+        "number": "1341341000"
+      }
+    ]
+  },
+  {
+    "firstName": "Johnny",
+    "lastName": "Snowy",
+    "address": {
+      "country": "Bulgaria",
+      "city": "Sofia",
+      "street": "Barcelona"
+    },
+    "phoneNumbers": [
+      {
+        "number": "1341341000"
+      },
+      {
+        "number": "5421520000"
+      }
+    ]
+  },
+  {
+    "firstName": "Johanna",
+    "lastName": "Snowova",
+    "address": {
+      "country": "Bulgaria",
+      "city": "Barcelona",
+      "street": "Barcelona"
+    },
+    "phoneNumbers": [
+      {
+        "number": "1341341000"
+      },
+      {
+        "number": "5421520000"
+      }
+    ]
+  }
+]

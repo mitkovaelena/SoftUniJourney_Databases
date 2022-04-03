@@ -1,0 +1,17 @@
+{
+  "firstName": "John",
+  "lastName": "Snow",
+  "address": {
+    "country": "Bulgaria",
+    "city": "Barcelona",
+    "street": "Barcelona"
+  },
+  "phoneNumbers": [
+    {
+      "number": "1341341000"
+    },
+    {
+      "number": "5421520000"
+    }
+  ]
+}
