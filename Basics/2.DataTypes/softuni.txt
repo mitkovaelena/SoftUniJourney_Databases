@@ -1,0 +1,69 @@
+CREATE DATABASE softuni;
+CREATE TABLE towns (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(20),
+    CONSTRAINT pk_towns PRIMARY KEY (id)
+);
+ 
+CREATE TABLE addresses (
+    id INT NOT NULL AUTO_INCREMENT,
+    address_text TEXT,
+    town_id INT,
+    CONSTRAINT pk_addresses PRIMARY KEY (id),
+    CONSTRAINT fk_addresses_towns FOREIGN KEY (town_id)
+        REFERENCES towns (id)
+);
+ 
+CREATE TABLE departments (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(50),
+    CONSTRAINT pk_departments PRIMARY KEY (id)
+);
+ 
+CREATE TABLE employees (
+    id INT NOT NULL AUTO_INCREMENT,
+    first_name VARCHAR(20) NOT NULL,
+    middle_name VARCHAR(20),
+    last_name VARCHAR(20) NOT NULL,
+    job_title VARCHAR(50),
+    department_id INT,
+    hire_date DATE,
+    salary DECIMAL(10,2),
+    address_id INT,
+    CONSTRAINT pk_employees PRIMARY KEY (id),
+    CONSTRAINT fk_employees_departments FOREIGN KEY (department_id)
+        REFERENCES departments (id),
+    CONSTRAINT fk_employees_addresses FOREIGN KEY (address_id)
+        REFERENCES addresses (id)
+);
+
+INSERT INTO towns(id, name)
+VALUES(1, 'Sofia');
+INSERT INTO towns(id, name)
+VALUES(2, 'Plovdiv');
+INSERT INTO towns(id, name)
+VALUES(3, 'Varna');
+INSERT INTO towns(id, name)
+VALUES(4, 'Burgas');
+
+INSERT INTO departments(id, name)
+VALUES(1, 'Engineering');
+INSERT INTO departments(id, name)
+VALUES(2, 'Sales');
+INSERT INTO departments(id, name)
+VALUES(3, 'Marketing');
+INSERT INTO departments(id, name)
+VALUES(4, 'Software Development');
+INSERT INTO departments(id, name)
+VALUES(5, 'Quality Assurance');
+
+INSERT INTO employees(id, first_name, middle_name, last_name, job_title, department_id, hire_date, salary)
+VALUES(1, 'Ivan', 'Ivanov', 'Ivanov', '.NET Developer', 4, CAST('2013-02-01' AS DATE), 3500.00);
+INSERT INTO employees(id, first_name, middle_name, last_name, job_title, department_id, hire_date, salary)
+VALUES(2, 'Petar', 'Petrov', 'Petrov', 'Senior Engineer', 1, CAST('2004-03-02' AS DATE), 4000.00);
+INSERT INTO employees(id, first_name, middle_name, last_name, job_title, department_id, hire_date, salary)
+VALUES(3, 'Maria', 'Petrova', 'Ivanova', 'Intern', 5, CAST('2016-08-28' AS DATE), 525.25);
+INSERT INTO employees(id, first_name, middle_name, last_name, job_title, department_id, hire_date, salary)
+VALUES(4, 'Georgi', 'Terziev', 'Ivanov', 'CEO', 2, CAST('2007-12-09' AS DATE), 3000.00);
+INSERT INTO employees(id, first_name, middle_name, last_name, job_title, department_id, hire_date, salary)
+VALUES(5, 'Peter', 'Pan', 'Pan', 'Intern', 3, CAST('2016-08-28' AS DATE), 599.88);

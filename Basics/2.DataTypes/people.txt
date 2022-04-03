@@ -1,0 +1,60 @@
+CREATE TABLE `people`(
+id INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(200) NOT NULL,
+picture VARBINARY(8000),
+height DOUBLE(5,2),
+weight DOUBLE(5,2),
+gender TINYINT NOT NULL,
+birthdate DATE NOT NULL,
+biography TEXT
+); 
+INSERT INTO people(name,picture, height, weight, gender, birthdate, biography)
+VALUES ("Elena", NULL, NULL, NULL, 1, "1996-01-01", NULL); 
+INSERT INTO people(name,picture, height, weight, gender, birthdate, biography)
+VALUES ("Elena", NULL, NULL, NULL, 1, "1996-01-01", NULL); 
+INSERT INTO people(name,picture, height, weight, gender, birthdate, biography)
+VALUES ("Elena", NULL, NULL, NULL, 1, "1996-01-01", NULL); 
+INSERT INTO people(name,picture, height, weight, gender, birthdate, biography)
+VALUES ("Elena", NULL, NULL, NULL, 1, "1996-01-01", NULL); 
+INSERT INTO people(name,picture, height, weight, gender, birthdate, biography)
+VALUES ("Elena", NULL, NULL, NULL, 1, "1996-01-01", NULL); 
+CREATE TABLE `users`(
+id INT PRIMARY KEY AUTO_INCREMENT,
+`username` VARCHAR(30) UNIQUE NOT NULL,
+`password` VARCHAR(26) NOT NULL,
+profile_picture VARBINARY(8000),
+last_login_time TIME,
+is_deleted TINYINT
+); 
+INSERT INTO users(username,`password`,profile_picture, last_login_time, is_deleted)
+VALUES ("Elena", "eli", NULL, NULL, 1 ); 
+INSERT INTO users(username,`password`,profile_picture, last_login_time, is_deleted)
+VALUES ("Elena1", "eli", NULL, NULL, 1 ); 
+INSERT INTO users(username,`password`,profile_picture, last_login_time, is_deleted)
+VALUES ("Elena2", "eli", NULL, NULL, 1 ); 
+INSERT INTO users(username,`password`,profile_picture, last_login_time, is_deleted)
+VALUES ("Elena3", "eli", NULL, NULL, 1 ); 
+INSERT INTO users(username,`password`,profile_picture, last_login_time, is_deleted)
+VALUES ("Elena4", "eli", NULL, NULL, 1 );  
+ALTER TABLE users
+MODIFY id INT NOT NULL;
+ALTER TABLE users
+DROP PRIMARY KEY;
+ALTER TABLE `users` 
+ADD CONSTRAINT pk_id_username PRIMARY KEY(id, username);
+
+ALTER TABLE `users`
+MODIFY last_login_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE users
+MODIFY id INT NOT NULL;
+ALTER TABLE users
+MODIFY username  VARCHAR(30) NOT NULL;
+ALTER TABLE users
+DROP PRIMARY KEY;
+ALTER TABLE `users` 
+ADD CONSTRAINT pk_id PRIMARY KEY(id);
+ALTER TABLE users
+MODIFY username  VARCHAR(30) UNIQUE NOT NULL;
+TRUNCATE TABLE `minions`; 
+DROP TABLE `minions`;
+DROP TABLE `towns`; 
